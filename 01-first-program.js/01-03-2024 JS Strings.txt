@@ -1,3 +1,0 @@
-Strings :
--anything represented in qoutes (''," " , ``) - sequence of characters (a-zA-Z0-9-special)
-'',"abs","

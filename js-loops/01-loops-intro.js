@@ -35,3 +35,13 @@ for(let i = 0; i <= 10; i += 2) {
 for(let i = 50; i >= 0; i -= 10) {
     console.log(i);
 }
+
+
+
+for(let i = 1; i <= 5; i++){
+    console.log('Hello');
+}
+
+for(let i = 100; i >= 0; i--){
+    console.log(i)
+}
