@@ -338,14 +338,14 @@ firstDuplicate([ 'foo', 'abc', '123', 'bar’ ])  -> -1 */
 console.log(`\n--------TASK15----------\n`);
 
 function  firstDuplicate(arr){ 
-    let noDuplicates = - 1;
+    let duplicates = - 1;
     for(let i = 0; i < arr.length; i++){
        if(arr.lastIndexOf(arr[i]) !== i) {
-        noDuplicates = arr[i];
+        duplicates = arr[i];
         break;
        }
 }
-return noDuplicates;
+return duplicates;
 }
 console.log(firstDuplicate([ 3, 7, 10, 0, 3, 10 ]));
 console.log(firstDuplicate([ 5, 7, 7, 0, 5, 10 ]) );
@@ -365,14 +365,25 @@ return empty array if there are no duplicates in the array. For
 two elements to be considered as duplicated, value and data 
 types of the elements must be same.
 Examples:
-getDuplicates([ 0, -4, -7, 0, 5, 10, 45, -7, 0 ]) -
-> [ 0, -7 ]
+getDuplicates([ 0, -4, -7, 0, 5, 10, 45, -7, 0 ]) -> [ 0, -7 ]
 getDuplicates([ 1, 2, 5, 0, 7 ]) -> [ ]
-getDuplicates(['A', 'foo', '12’ , 12, 'bar', 'a', 'a', 'foo' ]) -
-> [ 'foo', 'a’ ]
-getDuplicates([ 'foo', '12' , 12, 'bar', 'a' ]) -
-> [ ]*/
+getDuplicates(['A', 'foo', '12’ , 12, 'bar', 'a', 'a', 'foo' ]) -> [ 'foo', 'a’ ]
+getDuplicates([ 'foo', '12' , 12, 'bar', 'a' ]) -> [ ]*/
 console.log(`\n--------TASK16----------\n`);
+function  getDuplicates(arr){
+    let duplicates = [];
+    for(let i = 0; i < arr.length; i++){
+        for(let j = i + 1; j < arr.length; j++){
+            if(arr[i] === arr[j] && !duplicates.includes(arr[i])) duplicates.push(arr[i]) 
+        }
+    }
+return duplicates;
+}
+
+console.log(getDuplicates([ 0, -4, -7, 0, 5, 10, 45, -7, 0 ]));
+console.log(getDuplicates([ 1, 2, 5, 0, 7 ]));
+console.log(getDuplicates(['A', 'foo', '12', 12, 'bar', 'a', 'a', 'foo']));
+console.log(getDuplicates([ 'foo', '12' , 12, 'bar', 'a' ]));
 
 
 /*Requirement:
@@ -425,7 +436,21 @@ getEvens(4, 4) -> [ 4 ]
 getEvens(3, 3) -> [ ]*/
 console.log(`\n--------TASK18----------\n`);
 
-
+function getEvens(num1, num2){
+    let evens = [];
+    let greaterNumber = Math.max(num1,num2);
+    let smallerNumber = Math.min(num1, num2);
+   
+    
+for(let i = smallerNumber; i <= greaterNumber; i++){
+ if(i % 2 === 0 ) evens.push(i);
+    }
+return evens;
+}
+console.log(getEvens(2, 7));
+console.log(getEvens(17, 5));
+console.log(getEvens(4, 4));
+console.log(getEvens(3, 3));
 /*Requirement:
 Write a function named as getMultipleOf5() which takes 2 
 number arguments and returns all the numbers divisible by 5 
@@ -442,7 +467,23 @@ getMultipleOf5(5, 5) -> [ 5 ]
 getMultipleOf5(2, 4) -> [ ]*/ 
 
 console.log(`\n--------TASK19----------\n`);
-
+function getMultipleOf5(num1,num2){
+    let divisible = [];
+    if(num1 > num2){
+ for(i = num1; i >= num2; i--){
+        if(i % 5 === 0) divisible.push(i);
+ }
+    }else{
+        for(let i = num1; i <= num2; i++){
+            if(i % 5 === 0) divisible.push(i);
+        }
+        }
+        return divisible; 
+}
+console.log(getMultipleOf5(3, 17));
+console.log(getMultipleOf5(23, 5));
+console.log(getMultipleOf5(5, 5));
+console.log(getMultipleOf5(2, 4));
 
 
 /*Requirement:

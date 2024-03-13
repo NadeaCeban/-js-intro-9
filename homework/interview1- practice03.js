@@ -9,9 +9,9 @@ Examples:
 5   -> false 
 10   -> true */
 
-let r1 = Math.floor(Math.random() * 11);
-console.log(r1);
-console.log(r1 === 0);
+let random1 = Math.floor(Math.random() * 11);
+console.log(random1);
+console.log(random1 === 0);
 
   
 
@@ -286,10 +286,10 @@ Examples:
 75   -> 165 
 100   -> 220  */
 
-let r1 = Math.floor(Math.random() * 101);
+let ran = Math.floor(Math.random() * 101);
 let unite = 2.2
-console.log(r1);
-console.log(r1 * 2.2);
+console.log(ran);
+console.log(ran * 2.2);
 
 
 /*Concat Two String 
@@ -327,19 +327,19 @@ function middle(company){
 console.log(middle("Global"));
 
 
-let r1 = Math.floor(Math.random( ) * 11);
-let r2 = Math.floor(Math.random( ) * 11);
-let r3 = Math.floor(Math.random( ) * 11);
-console.log(r1, r2, r3);
-console.log(Math.max(r1, r2, r3));
+let ra1 = Math.floor(Math.random( ) * 11);
+let ra2 = Math.floor(Math.random( ) * 11);
+let ra3 = Math.floor(Math.random( ) * 11);
+console.log(ra1, ra2, ra3);
+console.log(Math.max(ra1, ra2, ra3));
 
 
 
-let r1 = Math.floor(Math.random( ) * 11);
-let r2 = Math.floor(Math.random( ) * 11);
-let sum =(r1 + r2);
-console.log(r1, r2 );  //4 ,6
-console.log(sum % 2 === 0)
+let random2 = Math.floor(Math.random( ) * 11);
+let random3 = Math.floor(Math.random( ) * 11);
+let sum1 =(random1 + random2);
+console.log(random1, random2 );  //4 ,6
+console.log(sum1 % 2 === 0)
 
 
 

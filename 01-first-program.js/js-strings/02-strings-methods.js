@@ -3,7 +3,7 @@
 let day = 'Saturday';
  
 let dayLower = day.toLowerCase();
-let dayUpper = day.toUpperCasw();
+let dayUpper = day.toUpperCase();
 
 console.log(dayLower);  //'saturday';
 console.log(dayUpper);  //'SATURDAY';
