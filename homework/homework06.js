@@ -349,5 +349,4 @@ mostRepeated(["TechGlobal"])  -> "TechGlobal"*/
 
 
 console.log(`/n--------- Task13---------n/`);
-const mostRepeated = arr => {
-}
+ 

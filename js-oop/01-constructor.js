@@ -50,7 +50,7 @@ const student_morgan = {
 
 */
 //BEFORE ES6
-//Create a Student templete from which you can creat many similar student objects - onstructor function
+//Create a Student templete from which you can creat many similar student objects - constructor function
 function Student(fname, lname, age){
     this.fname = fname;
     this.lname = lname;
