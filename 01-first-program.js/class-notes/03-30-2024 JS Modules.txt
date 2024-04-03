@@ -1,0 +1,6 @@
+MODULES
+ 1. Before ES6 - CommoneJS Modules   -> module.export / require
+ Works well with server-side application that runs with Node.js
+
+
+ 2.
