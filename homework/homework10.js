@@ -170,6 +170,7 @@ console.log(reverseNumber(0));
 console.log(reverseNumber(111));
 
 
+
 /*
 Write a function named doubleOrTriple() which takes an array of numbers as 
 argument and a boolean value. It will return the array elements doubled if true 
