@@ -266,6 +266,9 @@ console.log(noDigit("123Hello World149"));
 
 const removeExtraSpaces1 = (str) => str.trim().split(' ').filter(s => s.length > 0).join(' ');
 
+console.log(removeExtraSpaces1("  	Hello    World 	"));
+console.log(removeExtraSpaces1(" 	JavaScript is    	fun") );
+
 function removeExtraSpaces(word){
   let result = "";
   let firstChar = "";
@@ -377,3 +380,40 @@ const replaceFirstLast = str => {
   console.log(replaceFirstLast("    A      "));
 
 
+
+const findUniques = (arr1, arr2) => [...(new Set(arr1.concat(arr2).filter(i => !(arr1.includes(i) && arr2.includes(i)))))]
+
+console.log(findUniques([], []));             
+console.log(findUniques([], [1, 2, 3, 2]));   
+console.log(findUniques([1, 2, 3, 4], [3, 4, 5, 5])); 
+console.log(findUniques([8, 9], [9, 8, 9])); 
+console.log(findUniques([-1, -2], [1, 2]));   
+
+
+
+const removeExtraSpaces = (str) => str.trim().split(' ').filter(s => s.length > 0).join(' ');
+
+//WAY 2:  
+    //let result = ''
+    // for(s of strAsArr){
+    //     if(s !== '') result += `${s} `
+    // }
+    // return result.slice(0,-1)
+console.log(removeExtraSpaces("Hello"));
+console.log(removeExtraSpaces("      Hello    World     "));
+console.log(removeExtraSpaces("     JavaScript is          fun"));
+console.log(removeExtraSpaces(""));
+
+
+const reverseNumber = num => {
+  let reversed = 0;
+  for(let i = num; i > 0; i = Math.floor(i / 10)){
+    reversed= (reversed * 10) + (i % 10)
+  }
+  return reversed
+}
+console.log(reverseNumber(371));
+console.log(reverseNumber(123));
+console.log(reverseNumber(12));
+console.log(reverseNumber(111));
+console.log(reverseNumber(0));
